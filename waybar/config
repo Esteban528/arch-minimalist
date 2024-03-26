@@ -1,0 +1,46 @@
+{
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "pulseaudio", "custom/separator", "tray"],
+  "hyprland/window": {
+    "format": "{initialTitle}",
+    "interval": 1
+  },
+  "hyprland/workspaces": {
+      "persistent-workspaces": {
+           "*": 5
+     }
+  },
+  "network": {
+    "format-wifi": "󰤯   {essid}",
+    "format-ethernet": "󰈀  ",
+    "format-disconnected": "󰤮   Disconnected",
+    "interval": 10
+  },
+  "clock": {
+    "format": "{:%d/%m/%Y  %H:%M}",
+    "interval": 10
+  },
+  "pulseaudio": {
+    "format": "{icon}{volume}",
+    "format-muted": " muted",
+    "format-icons": {
+        "headphone": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": [" ", " ", "󰕾 ", "󰕾 ", "󰕾 ", " ", " ", " "]
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "interval": 1
+  },
+  "custom/separator": {
+    "format": "    ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  }
+}
